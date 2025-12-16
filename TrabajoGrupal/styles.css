@@ -1,0 +1,29 @@
+img{
+    background-color: aqua;
+    background-image: ;
+    width: 150px;
+    height: 130px;
+    border-radius: 100px;
+    padding-top: 10px;
+}
+h1+div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+}
+.photo{
+    background-color: aqua;
+    width: 30%;
+    border: solid;
+    border-radius: 10px;
+    text-align: center;
+    
+
+}
+.descripcion{
+    background-color: blueviolet;
+    width: 60%;
+    border: solid;
+    border-radius: 10px;
+}
