@@ -51,7 +51,7 @@ public class PruebaEsqueleto {
 			}
 			
 		}while(opcion.equalsIgnoreCase("s"));
-		System.out.println("Has salido");
+		System.out.println("Fin del Juego");
 
 	}
 	public static String generaPalabra(String[] palabras) {
