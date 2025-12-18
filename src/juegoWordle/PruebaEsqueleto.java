@@ -65,9 +65,11 @@ public class PruebaEsqueleto {
 		for (int i=0;i<5;i++) {
 			boolean estaChar=false;
 			for (int j=0;j<5;j++) {
-				if (palabraIntroducida.charAt(i)==palabraSecreta.charAt(j)) {
-					aux+=palabraIntroducida.charAt(i);
-					estaChar=true;
+				if(palabraSecreta.indexOf(j)==palabraSecreta.lastIndexOf(j)) {
+					if (palabraIntroducida.charAt(i)==palabraSecreta.charAt(j)) {
+						aux+=palabraIntroducida.charAt(i);
+						estaChar=true;
+					}
 				}
 			}
 			if(!estaChar) 
