@@ -16,7 +16,7 @@ public class PruebaEsqueleto {
 		String palabraIntroducida,opcion;
 		do {
 			numIntentosConsumidos=0;
-			palabraSecreta=generaPalabra(palabras);
+			palabraSecreta="volar";//generaPalabra(palabras);
 			System.out.println(palabraSecreta);
 			
 			System.out.println("Bienvenid@ al juego de Wordle.\n"
