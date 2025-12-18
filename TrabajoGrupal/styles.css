@@ -1,6 +1,5 @@
 img{
     background-color: aqua;
-    background-image: ;
     width: 150px;
     height: 130px;
     border-radius: 100px;
@@ -10,7 +9,8 @@ h1+div{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1em;
+    margin: 3%;
+    justify-content: center;
 }
 .photo{
     background-color: aqua;
@@ -18,12 +18,70 @@ h1+div{
     border: solid;
     border-radius: 10px;
     text-align: center;
-    
-
+    margin: 1%;
 }
 .descripcion{
-    background-color: blueviolet;
-    width: 60%;
+    background-color: greenyellow;
+    width: 55%;
     border: solid;
     border-radius: 10px;
+    padding: 1em;
+    align-self:stretch;
+    margin: 1%;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    text-decoration: underline;
+    font-weight: 2.5em;
+}
+.yago{
+    animation-delay: 5s;
+    animation: opacityOn 5s normal forwards;
+}
+.paul{
+    opacity:0;
+    animation: opacityOn1 5s normal 5s forwards;
+}
+.jose{
+    opacity:0;
+    animation: opacityOn1 5s normal 10s forwards;
+}
+.natalia{
+    opacity:0;
+    animation: opacityOn1 5s normal 20s forwards;
+}
+.javi{
+    opacity:0;
+    animation: opacityOn1 5s normal 30s forwards;
+}
+.edu{
+    opacity:0;
+    animation: opacityOn1 5s normal 40s forwards;
+}
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacityOn1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
