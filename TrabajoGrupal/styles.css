@@ -1,7 +1,7 @@
 img{
     background-color: aqua;
-    width: 150px;
-    height: 130px;
+    width: 200px;
+    height: 180px;
     border-radius: 100px;
     padding-top: 10px;
 }
@@ -28,6 +28,7 @@ h1+div{
     padding: 1em;
     align-self:stretch;
     margin: 1%;
+    z-index: 2;
 }
 h2{
     font-size: 2em;
@@ -84,4 +85,9 @@ h1{
     100% {
         opacity: 1;
     }
+}
+img:hover{
+ width:500px;
+ height: 500px;
+ z-index: 3;
 }
