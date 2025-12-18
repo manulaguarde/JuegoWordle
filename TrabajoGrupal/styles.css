@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body{
     background-color: khaki;
 }
@@ -83,4 +84,105 @@ img:hover{
  width:500px;
  height: 500px;
  z-index: 3;
+=======
+body{
+    background: #24C6DC;
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC); 
+    background: linear-gradient(to right, #514A9D, #24C6DC);
+}
+img{
+    
+    width: 200px;
+    height: 180px;
+    border-radius: 100px;
+    padding-top: 10px;
+}
+h1+div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 3%;
+    justify-content: center;
+}
+.photo{
+    background: #085078; 
+    background: -webkit-linear-gradient(to right, #85D8CE, #085078);  
+    background: linear-gradient(to right, #85D8CE, #085078);
+    width: 30%;
+    border:2px;
+    box-shadow: 5px 3px 15px;
+    border-radius: 3pc 0px 0px;
+    text-align: center;
+    margin: 1%;
+}
+.descripcion{
+    background-color: rgb(246, 235, 220);
+    width: 55%;
+    border: 1px;
+    box-shadow: 5px 3px 15px;
+    padding: 1em;
+    align-self:stretch;
+    border-radius: 0px 0px 3pc;
+    margin: 1%;
+    z-index: 2;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+   font-style: italic;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    font-weight: 2.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.paul{
+    opacity:0;
+    animation: opacityOn1 3s normal forwards;
+}
+.jose{
+    opacity:0;
+    animation: opacityOn1 4s normal 4s forwards;
+}
+.natalia{
+    opacity:0;
+    animation: opacityOn1 4s normal 8s forwards;
+}
+.javi{
+    opacity:0;
+    animation: opacityOn1 4s normal 12s forwards;
+}
+.edu{
+    opacity:0;
+    animation: opacityOn1 4s normal 16s forwards;
+}
+.yago{
+    opacity:0;
+    animation: opacityOn1 4s normal 20s forwards;
+}
+.asd{
+    opacity:0;
+    animation: opacityOn1 4s normal 24s forwards;
+    text-align: center;
+}
+
+@keyframes opacityOn1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+img:hover{
+ width:500px;
+ height: 500px;
+ z-index: 3;
+>>>>>>> Stashed changes
 }
