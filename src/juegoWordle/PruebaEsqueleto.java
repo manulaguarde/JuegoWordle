@@ -16,7 +16,7 @@ public class PruebaEsqueleto {
 		String palabraIntroducida,opcion;
 		do {
 			numIntentosConsumidos=0;
-			palabraSecreta="volar";//generaPalabra(palabras);
+			palabraSecreta="plaza";//generaPalabra(palabras);
 			System.out.println(palabraSecreta);
 			
 			System.out.println("Bienvenid@ al juego de Wordle.\n"
@@ -63,18 +63,25 @@ public class PruebaEsqueleto {
 	public static String compruebaLetrasAcertadas(String palabraIntroducida) {
 		String aciertos="", aux="";
 		for (int i=0;i<5;i++) {
-			boolean estaChar=false;
+			boolean estaChar=false, repite=false;
 			for (int j=0;j<5;j++) {
-				if(palabraSecreta.indexOf(j)==palabraSecreta.lastIndexOf(j)) {
+				if(palabraSecreta.indexOf(palabraSecreta.charAt(j))==palabraSecreta.lastIndexOf(palabraSecreta.charAt(j))) {
 					if (palabraIntroducida.charAt(i)==palabraSecreta.charAt(j)) {
 						aux+=palabraIntroducida.charAt(i);
 						estaChar=true;
 					}
+				}else if(palabraSecreta.indexOf(palabraSecreta.charAt(j))!=palabraSecreta.lastIndexOf(palabraSecreta.charAt(j))) {
+					if(!repite) {
+						if (palabraIntroducida.charAt(i)==palabraSecreta.charAt(j)) {
+							aux+=palabraIntroducida.charAt(i);
+							estaChar=true;
+							repite=true;
+						}
+					}
 				}
 			}
 			if(!estaChar) 
-				aux+="*";
-			
+				aux+="*";	
 		}
 		String palabraSecretaDos=palabraSecreta.toUpperCase();
 		for(int i=0;i<5;i++) {
