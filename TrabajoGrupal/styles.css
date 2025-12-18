@@ -1,3 +1,6 @@
+body{
+    background-color: khaki;
+}
 img{
     background-color: aqua;
     width: 200px;
@@ -44,8 +47,8 @@ h1{
     font-weight: 2.5em;
 }
 .yago{
-    animation-delay: 5s;
-    animation: opacityOn 5s normal forwards;
+    /*animation-delay: 5s;*/
+    animation: opacityOn1 5s normal forwards;
 }
 .paul{
     opacity:0;
@@ -57,27 +60,17 @@ h1{
 }
 .natalia{
     opacity:0;
-    animation: opacityOn1 5s normal 20s forwards;
+    animation: opacityOn1 5s normal 15s forwards;
 }
 .javi{
     opacity:0;
-    animation: opacityOn1 5s normal 30s forwards;
+    animation: opacityOn1 5s normal 20s forwards;
 }
 .edu{
     opacity:0;
-    animation: opacityOn1 5s normal 40s forwards;
+    animation: opacityOn1 5s normal 25s forwards;
 }
-@keyframes opacityOn {
-    0% {
-        opacity: 0;
-    }
-    50%{
-        opacity:0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 @keyframes opacityOn1 {
     0% {
         opacity: 0;
