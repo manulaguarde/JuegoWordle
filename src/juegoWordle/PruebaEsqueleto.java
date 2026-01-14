@@ -1,3 +1,4 @@
+// realizado por Tomas Galdeano Y Manuel Rey
 package juegoWordle;
 
 import java.util.Random;
@@ -10,13 +11,14 @@ public class PruebaEsqueleto {
 	static int numLetrasAdivinadas;
 
 	public static void main(String[] args) {
+		// realizado por Tomas Galdeano Y Manuel Rey
 		String[] palabras = { "carta", "perro", "salto", "campo", "norte", "limon", "dulce", "trigo", "plaza", "freno",
 				"brazo", "clavo", "grito", "silla", "mundo", "pesca", "tarde", "cinto", "burro", "saldo" };
 		int victoriasJugador = 0, victoriasMaquina = 0, partidas = 0;
 		String palabraIntroducida, opcion;
 		do {
 			numIntentosConsumidos = 0;
-			palabraSecreta ="casar";//generaPalabra(palabras);
+			palabraSecreta ="pizza";//generaPalabra(palabras);
 			//System.out.println(palabraSecreta);
 
 			System.out.println(
@@ -27,7 +29,7 @@ public class PruebaEsqueleto {
 				System.out.print(">");
 				palabraIntroducida = scanner.nextLine();
 				if (comprobar(palabraIntroducida)) {
-					String aciertos = compruebaLetrasAcertadas(palabraIntroducida);
+					String aciertos = compruebaLetrasAcertadas2(palabraIntroducida);
 					System.out.println(aciertos);
 					numIntentosConsumidos++;
 				} else {
@@ -97,13 +99,14 @@ public class PruebaEsqueleto {
 	}
 
 	private static boolean es_palabra(String cadena) {
+		// comprueba si la palaba es mas o menos una parlabra
 		int consonantes = 0;
 		boolean vocal = false;
 		char[] vocales = { 'a', 'e', 'i', 'o', 'u', 'ú', 'ó', 'í', 'é', 'á' };
 		for (int i = 0; i < cadena.length(); i++) {
 			for (int j = 0; j < vocales.length; j++) {
 				if (cadena.charAt(i) == vocales[j]) {
-					vocal = true; // si letrtaa es vocal retorna true
+					vocal = true; // si letra es vocal retorna true
 				}
 			}
 			if (!vocal) {
@@ -128,6 +131,7 @@ public class PruebaEsqueleto {
 	}
 
 	public static String generaPalabra(String[] palabras) {
+		// genera una palabra aleatoria de la lista
 		Random genAle = new Random();
 		palabraSecreta = palabras[genAle.nextInt(palabras.length)];
 
@@ -168,11 +172,47 @@ public class PruebaEsqueleto {
 
 		}
 		return aciertos;
-
 	}
+		public static String compruebaLetrasAcertadas2(String palabraIntroducida) {
+		String aciertos = "", aux = "";
+		palabraIntroducida = palabraIntroducida.toLowerCase();
+		char[] letters = new char[5];
+		char[] ans = new char[5];
+		for(int i=0;i<palabraIntroducida.length();i++){
+			letters[i] = palabraSecreta.charAt(i);
+			ans[i]='*';
+		}
+		palabraIntroducida = palabraIntroducida.toUpperCase();
+		palabraSecreta = palabraSecreta.toUpperCase();
+		for(int i=0;i<5;i++){
+			if(palabraIntroducida.charAt(i)==palabraSecreta.charAt(i)){
+				ans[i] = palabraSecreta.charAt(i);
+				letters[i]='*';
+			}			
+		}
+		palabraIntroducida = palabraIntroducida.toLowerCase();
+		palabraSecreta = palabraSecreta.toLowerCase();
+		for (int i = 0;i<5;i++){
+			boolean estaChar = false;
+				for(int j = 0;j<palabraIntroducida.length();j++){
+					if(letters[j]==palabraIntroducida.charAt(i) && !estaChar && ans[i]=='*'){
+						estaChar = true;
+						ans[i] = letters[j];
+						letters[j] = '*';
+					} 
+				
+				estaChar = false;
+			}
+		}
 
+		for (int i = 0; i < 5; i++) {
+			aciertos+=ans[i];
+		}
+
+		return aciertos;
+	}
 	public static boolean haGanadoJugador(String palabraIntroducida) {
-
+		// comprueba si ha ha ganado el jugador
 		if (palabraIntroducida.equalsIgnoreCase(palabraSecreta))
 			return true;
 
@@ -180,7 +220,7 @@ public class PruebaEsqueleto {
 	}
 
 	public static boolean haTerminadoJuego() {
-
+		// comprueba si ha a acabado el juego
 		if (numIntentosConsumidos == 6)
 			return true;
 
